@@ -15,16 +15,27 @@ namespace Task1
                 if (int.TryParse(B, out int b))
                 {
                     int resault = 0;
-                    for (int i = 1; i <= b; i++)
+                    if (b < 0)
                     {
-                        resault = resault + a;
+                        for (int i = 1; i <= -b; i++)
+                        {
+                            resault = resault + -a;
+                        }
+                        Console.WriteLine($"a * b = {resault}");
                     }
-                    Console.WriteLine($"a * b = {resault}");
+                    else
+                    {
+                        for (int i = 1; i <= b; i++)
+                        {
+                            resault = resault + a;
+                        }
+                        Console.WriteLine($"a * b = {resault}");
+                    }
                 }
                 else Console.WriteLine("Значение введено неверно.");
             }
             else Console.WriteLine("Значение введено неверно.");
-            Console.ReadKey();
+            Console.ReadKey(true);
         }
     }
 }
