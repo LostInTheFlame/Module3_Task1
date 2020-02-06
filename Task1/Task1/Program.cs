@@ -14,28 +14,28 @@ namespace Task1
                 string B = Console.ReadLine();
                 if (int.TryParse(B, out int b))
                 {
-                    int resault = 0;
+                    int result = 0;
                     if (b < 0)
                     {
                         for (int i = 1; i <= -b; i++)
                         {
-                            resault = resault + -a;
+                            result = result + -a;
                         }
-                        Console.WriteLine($"a * b = {resault}");
+                        Console.WriteLine($"a * b = {result}");
                     }
                     else
                     {
                         for (int i = 1; i <= b; i++)
                         {
-                            resault = resault + a;
+                            result = result + a;
                         }
-                        Console.WriteLine($"a * b = {resault}");
+                        Console.WriteLine($"a * b = {result}");
                     }
                 }
                 else Console.WriteLine("Значение введено неверно.");
             }
             else Console.WriteLine("Значение введено неверно.");
-            Console.ReadKey(true);
+            Console.ReadKey();
         }
     }
 }
